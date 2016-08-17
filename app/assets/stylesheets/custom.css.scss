@@ -3,6 +3,8 @@ $navbar-inverse-bg: #333333;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@import 'https://fonts.googleapis.com/css?family=Exo:700';
+
 #logo {
 	color:#fff;
 }
@@ -40,7 +42,8 @@ footer ul li {
 }
 .article-title {
 	font-size: 2em;
-	font-weight: 100;
+	font-family: 'Exo', sans-serif;
+	font-color: #333333;
 }
 .article-body {
 	font-weight: 100;
