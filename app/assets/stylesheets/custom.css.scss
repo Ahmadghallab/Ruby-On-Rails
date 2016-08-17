@@ -1,15 +1,23 @@
-$navbar-inverse-bg: #333333;
+$navbar-default-bg: #fff;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-@import 'https://fonts.googleapis.com/css?family=Exo:700';
+@import 'https://fonts.googleapis.com/css?family=Handlee';
+
+body {
+	background-color: #f2f2f2; 
+}
 
 #logo {
-	color:#fff;
+		font-family: 'Handlee', cursive;
+    font-style: normal;
+    font-weight: bold;
+	color:#ff5252;
 }
-.navbar-inverse {
+.navbar-default {
 	border-radius:0;
+	border-bottom: 1px solid #ddd;
 }
 .jumbotron {
 /*  code for making image as bg for jumbotron 
@@ -41,12 +49,34 @@ footer ul li {
 	margin-left: 10px;
 }
 .article-title {
-	font-size: 2em;
-	font-family: 'Exo', sans-serif;
-	font-color: #333333;
+	font-family: 'Handlee', cursive;
+    font-style: normal;
+    font-weight: bold;
+    color: black;
+    font-size: 44px !important;
+    line-height: 42px !important;
+    padding: 5px 0;
+
 }
 .article-body {
-	font-weight: 100;
 	padding: 5px 0;
 }
-
+.listing {
+	list-style: none;
+	padding: 0;
+}
+.well-custom {
+	border: 0px solid #eee;
+	border-radius: 5px;
+	padding: 20px;
+	background-color: #fff;
+	margin-bottom: 5px;
+}
+a {
+	color: #ff5252;
+	text-decoration: none;
+}
+a:hover {
+	color: #333;
+	text-decoration: none;
+}

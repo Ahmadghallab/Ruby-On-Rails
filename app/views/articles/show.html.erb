@@ -1,11 +1,19 @@
 
-<h2 align="center"><%= @article.title %></h2>
-<div class="well col-xs-8 col-xs-offset-2">
 
-	 <%= simple_format(@article.description) %>
+<div class="well-custom col-xs-8 col-xs-offset-2">
+<div class="article-title">
+<%= @article.title %>
 
+</div>
 
+<small>
+Created by: 
+<%= @article.user.username if @article.user %>, <%= time_ago_in_words(@article.created_at) %> ago, last updated: <% time_ago_in_words(@article.updated_at) %> ago 
+</small>
 
+<div class="article-body">
+<%= simple_format(@article.description) %>
+</div>
 
 <%= link_to "Edit this article", edit_article_path(@article), class: "btn btn-xs btn-warning" %>
 <%= link_to "Delete this article", article_path(@article), method: :delete, data: {confirm: "Are you sure"}, class: "btn btn-xs btn-danger" %>
