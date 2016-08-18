@@ -17,8 +17,8 @@ body {
 }
 .navbar-default {
 	border-radius:0;
-	border-bottom: 1px solid #ddd;
-}
+/*	border-bottom: 1px solid #ddd;
+*/}
 .jumbotron {
 /*  code for making image as bg for jumbotron 
 NOTICE photo placed in assets/images dir
@@ -79,4 +79,11 @@ a {
 a:hover {
 	color: #333;
 	text-decoration: none;
+}
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
+	background-color: #ff5252;
+    border-color: #ff5252;
+}
+.pagination > li > a, .pagination > li > span {
+	color: #ff5252;
 }
