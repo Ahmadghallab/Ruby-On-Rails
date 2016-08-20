@@ -1,4 +1,4 @@
-<% obj.each do |article| %>
+<% obj.each do |article| %> 
 
 	<div class="row">
 		<div class="well-custom col-xs-8 col-xs-offset-2">
@@ -9,14 +9,18 @@
 				<div class="article-body">
 					<%= truncate(article.description, length: 100) %>
 					<p>
-					<small>Created by: <%= article.user.username if article.user %>, 
+					<small>Created by: <%= link_to article.user.username, user_path(article.user) if article.user %>, 
 							<%= time_ago_in_words(article.created_at) %> ago, 
 							last updated: <% time_ago_in_words(article.updated_at) %> ago </small>
 					</p>
 				</div>
 
-				<%= link_to "Edit this article", edit_article_path(article), class: "btn btn-xs btn-warning" %>
-<%= link_to "Delete this article", article_path(article), method: :delete, data: {confirm: "Are you sure"}, class: "btn btn-xs btn-danger" %>
+<% if logged_in? && current_user == article.user %>
+
+	<%= link_to "Edit this article", edit_article_path(article), class: "btn btn-warning" %>
+	<%= link_to "Delete this article", article_path(article), method: :delete, data: {confirm: "Are you sure"}, class: "btn btn-danger" %>
+
+<% end %>
 
 			</div>
 		</div>

@@ -1,4 +1,4 @@
-$navbar-default-bg: #fff;
+$navbar-inverse-bg: #000000;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -15,7 +15,7 @@ body {
     font-weight: bold;
 	color:#ff5252;
 }
-.navbar-default {
+.navbar-inverse {
 	border-radius:0;
 /*	border-bottom: 1px solid #ddd;
 */}
@@ -86,4 +86,13 @@ a:hover {
 }
 .pagination > li > a, .pagination > li > span {
 	color: #ff5252;
+}
+.search-form {
+	box-shadow: none;
+	background-color: #333;
+	border:0;
+}
+.search-form:focus {
+	box-shadow: none;
+	background-color: #fff;
 }
