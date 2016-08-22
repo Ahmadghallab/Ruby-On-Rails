@@ -97,3 +97,21 @@ a:hover {
 	box-shadow: none;
 	background-color: #fff;
 }
+.badge {
+	background-color: #fff;
+	border:2px solid #ddd;
+	margin: 0 2px;
+}
+
+.badge a {
+	color: #999;
+	padding: 5px;
+	font-weight: normal;
+}
+
+.input_checkbox input {
+	width: auto !important;
+}
+.well-footer {
+	padding: 15px 0 0;
+}
