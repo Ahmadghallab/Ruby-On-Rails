@@ -1,6 +1,9 @@
 <div align="center">
 	<h2 class="article-title">
-		<%= "Category: " + @category.name %>
+		<%= "Category: " + @category.name %> 
+		<% if logged_in? and current_user.admin? %>
+		| <span class="badge"><%= link_to "Edit Category Name", edit_category_path(@category) %></span>
+		<% end %>
 	</h2>
 </div>
  <div align="center">
