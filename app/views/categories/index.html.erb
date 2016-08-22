@@ -1,0 +1,24 @@
+
+
+<div align="center">
+	<%= will_paginate %>
+</div>
+
+
+<div class="well-custom">
+
+
+
+<% @categories.each do |category| %>
+<div class="article-title">
+	<%= link_to "#{category.name}", category_path(category) %>
+</div>
+<% end %>
+
+
+
+</div>
+
+<div align="center">
+	<%= will_paginate %>
+</div>
